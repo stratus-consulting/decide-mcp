@@ -1,0 +1,275 @@
+{
+    "engine_version": "0.6.0",
+    "engagement_id": "example-crm-001",
+    "summary": {
+        "high": 3,
+        "medium": 8,
+        "low": 6,
+        "total": 17
+    },
+    "changes": {
+        "first_run": true,
+        "new": [],
+        "closed": [],
+        "not_resubmitted": []
+    },
+    "coverage_project": [
+        {
+            "category": "purpose",
+            "coverage": "covered"
+        },
+        {
+            "category": "scope",
+            "coverage": "covered"
+        },
+        {
+            "category": "use_case",
+            "coverage": "covered"
+        },
+        {
+            "category": "success",
+            "coverage": "covered"
+        },
+        {
+            "category": "people",
+            "coverage": "covered"
+        },
+        {
+            "category": "data_landscape",
+            "coverage": "partial"
+        },
+        {
+            "category": "procurement",
+            "coverage": "missing"
+        },
+        {
+            "category": "process",
+            "coverage": "missing"
+        }
+    ],
+    "coverage_objects": [
+        {
+            "name": "Account",
+            "categories": [
+                {
+                    "category": "object_context",
+                    "coverage": "covered"
+                },
+                {
+                    "category": "object_source",
+                    "coverage": "missing"
+                },
+                {
+                    "category": "dependencies",
+                    "coverage": "covered"
+                },
+                {
+                    "category": "hierarchy",
+                    "coverage": "partial"
+                },
+                {
+                    "category": "migration_logic",
+                    "coverage": "missing"
+                }
+            ]
+        },
+        {
+            "name": "Partner",
+            "categories": [
+                {
+                    "category": "object_context",
+                    "coverage": "missing"
+                },
+                {
+                    "category": "object_source",
+                    "coverage": "missing"
+                },
+                {
+                    "category": "dependencies",
+                    "coverage": "missing"
+                },
+                {
+                    "category": "hierarchy",
+                    "coverage": "missing"
+                },
+                {
+                    "category": "migration_logic",
+                    "coverage": "missing"
+                }
+            ]
+        }
+    ],
+    "risks": [
+        {
+            "id": "R-f79dcf1128",
+            "code": "FLAGGED",
+            "severity": "high",
+            "message": "Account: flagged: Parent hierarchy source not provided. It needs a decision from its owner before work on it can continue.",
+            "next_step": "Confirm Finance has a date to resolve it.",
+            "object": "Account",
+            "category": null,
+            "must_confirm": false
+        },
+        {
+            "id": "R-9aba2e4fc1",
+            "code": "IN_SCOPE_NOT_DISCOVERED",
+            "severity": "high",
+            "message": "Contact is in scope but has no Discovery results.",
+            "next_step": "Schedule Discovery with the owner of Contact.",
+            "object": "Contact",
+            "category": null,
+            "must_confirm": false
+        },
+        {
+            "id": "R-ac4a7ca66a",
+            "code": "IN_SCOPE_NOT_DISCOVERED",
+            "severity": "high",
+            "message": "Opportunity is in scope but has no Discovery results.",
+            "next_step": "Schedule Discovery with the owner of Opportunity.",
+            "object": "Opportunity",
+            "category": null,
+            "must_confirm": false
+        },
+        {
+            "id": "R-03ecf8476c",
+            "code": "ANSWER_WEAK",
+            "severity": "medium",
+            "message": "\"Where does the data live?\" doesn't yet give enough to picture the solution. The answer points to a source system and a partner spreadsheet, but 'mostly' leaves other data locations unidentified and the source system is not named.",
+            "next_step": "Ask the CRM admin to name the source system and list every other place data is kept beyond it and the partner spreadsheet, including who maintains each.",
+            "object": null,
+            "category": "data_landscape",
+            "must_confirm": false
+        },
+        {
+            "id": "R-8cadc51711",
+            "code": "OPEN_QUESTION",
+            "severity": "medium",
+            "message": "\"Any regulatory data?\" is unanswered.",
+            "next_step": "Ask the system or data owner: \"Any regulatory data?\"",
+            "object": null,
+            "category": "data_landscape",
+            "must_confirm": false
+        },
+        {
+            "id": "R-fc2195c316",
+            "code": "OPEN_QUESTION",
+            "severity": "medium",
+            "message": "Account: \"What does the hierarchy look like?\" is unanswered.",
+            "next_step": "Ask the business owner of the Account hierarchy: \"What does the hierarchy look like?\"",
+            "object": "Account",
+            "category": "hierarchy",
+            "must_confirm": false
+        },
+        {
+            "id": "R-095f0d6193",
+            "code": "PROJECT_TOPIC_MISSING",
+            "severity": "medium",
+            "message": "Nothing yet on how each business unit uses the system today, the business processes, and the reports that matter.",
+            "next_step": "Ask the business users who do this work about how each business unit uses the system today, the business processes, and the reports that matter.",
+            "object": null,
+            "category": "process",
+            "must_confirm": false
+        },
+        {
+            "id": "R-519e4ff33b",
+            "code": "OBJECT_TOPIC_MISSING",
+            "severity": "medium",
+            "message": "Account: nothing yet on where Account's data comes from, static files, record counts, and keys.",
+            "next_step": "Ask the system owner for Account about where Account's data comes from, static files, record counts, and keys.",
+            "object": "Account",
+            "category": "object_source",
+            "must_confirm": false
+        },
+        {
+            "id": "R-ff693d2931",
+            "code": "OBJECT_TOPIC_MISSING",
+            "severity": "medium",
+            "message": "Account: nothing yet on which Account records move, how far back, whether the logic differs by business unit, and whether original dates and owners are kept.",
+            "next_step": "Ask the business owner of Account about which Account records move, how far back, whether the logic differs by business unit, and whether original dates and owners are kept.",
+            "object": "Account",
+            "category": "migration_logic",
+            "must_confirm": false
+        },
+        {
+            "id": "R-6ce33aea50",
+            "code": "FLAG_INCOMPLETE",
+            "severity": "medium",
+            "message": "Account: flag \"Parent hierarchy source not provided\" doesn't say what it's waiting on and the date it was flagged.",
+            "next_step": "Record what it's waiting on and the date it was flagged.",
+            "object": "Account",
+            "category": null,
+            "must_confirm": false
+        },
+        {
+            "id": "R-2c604431f7",
+            "code": "OUTSIDE_SCOPE_NOT_LOGGED",
+            "severity": "medium",
+            "message": "Partner isn't in scope and isn't logged as discovered outside scope.",
+            "next_step": "Ask the scope owner whether Partner is in scope. If it isn't, log it with who asked for it and whether it's Day 1 or a planned fast follow.",
+            "object": "Partner",
+            "category": null,
+            "must_confirm": false
+        },
+        {
+            "id": "R-cb2ec27e22",
+            "code": "PROCUREMENT_CONTEXT_MISSING",
+            "severity": "low",
+            "message": "What the client has purchased isn't captured, so proposals can't be checked against what the org can do.",
+            "next_step": "If it's available, capture what the client has purchased: edition, licenses, add-ons, storage, API limits and sandboxes.",
+            "object": null,
+            "category": "procurement",
+            "must_confirm": false
+        },
+        {
+            "id": "R-e76fb24a16",
+            "code": "OBJECT_TOPIC_MISSING",
+            "severity": "low",
+            "message": "Partner: nothing yet on what Partner means to the business, who owns and uses it, its record types, and Day 1 needs.",
+            "next_step": "Ask the business owner of Partner about what Partner means to the business, who owns and uses it, its record types, and Day 1 needs.",
+            "object": "Partner",
+            "category": "object_context",
+            "must_confirm": false
+        },
+        {
+            "id": "R-0e9c4c57cf",
+            "code": "OBJECT_TOPIC_MISSING",
+            "severity": "low",
+            "message": "Partner: nothing yet on where Partner's data comes from, static files, record counts, and keys.",
+            "next_step": "Ask the system owner for Partner about where Partner's data comes from, static files, record counts, and keys.",
+            "object": "Partner",
+            "category": "object_source",
+            "must_confirm": false
+        },
+        {
+            "id": "R-8f1ea6d98d",
+            "code": "OBJECT_TOPIC_MISSING",
+            "severity": "low",
+            "message": "Partner: nothing yet on what must exist before Partner can load, and any reference data that's still changing.",
+            "next_step": "Ask the system owner for Partner about what must exist before Partner can load, and any reference data that's still changing.",
+            "object": "Partner",
+            "category": "dependencies",
+            "must_confirm": false
+        },
+        {
+            "id": "R-0e8aef7840",
+            "code": "OBJECT_TOPIC_MISSING",
+            "severity": "low",
+            "message": "Partner: nothing yet on Partner's source and target hierarchy, whether the source is complete, who owns it and who signs it off.",
+            "next_step": "Ask the business owner of the Partner hierarchy about Partner's source and target hierarchy, whether the source is complete, who owns it and who signs it off.",
+            "object": "Partner",
+            "category": "hierarchy",
+            "must_confirm": false
+        },
+        {
+            "id": "R-49198fa16b",
+            "code": "OBJECT_TOPIC_MISSING",
+            "severity": "low",
+            "message": "Partner: nothing yet on which Partner records move, how far back, whether the logic differs by business unit, and whether original dates and owners are kept.",
+            "next_step": "Ask the business owner of Partner about which Partner records move, how far back, whether the logic differs by business unit, and whether original dates and owners are kept.",
+            "object": "Partner",
+            "category": "migration_logic",
+            "must_confirm": false
+        }
+    ],
+    "risks_omitted": 0
+}

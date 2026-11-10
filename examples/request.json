@@ -1,0 +1,104 @@
+{
+  "engagement_id": "example-crm-001",
+  "sow": {
+    "use_case": "Consolidate two legacy CRMs into one Salesforce org.",
+    "assumptions": [
+      "Source data is in one system"
+    ],
+    "success_definition": "Sales can work pipeline on Day 1.",
+    "scope": [
+      "Account",
+      "Contact",
+      "Opportunity"
+    ]
+  },
+  "project_items": [
+    {
+      "category": "purpose",
+      "question": "Why now?",
+      "answer": "Legacy CRM contract ends in Q2; the main pain is duplicate entry.",
+      "source": {
+        "who": "VP Sales"
+      }
+    },
+    {
+      "category": "success",
+      "question": "What does Day 1 look like?",
+      "answer": "Reps can see open opportunities and accounts.",
+      "source": {
+        "who": "VP Sales"
+      }
+    },
+    {
+      "category": "people",
+      "question": "Who are the decision makers?",
+      "answer": "VP Sales is the sponsor; the CRM admin signs off on data.",
+      "source": {
+        "who": "PM"
+      }
+    },
+    {
+      "category": "data_landscape",
+      "question": "Where does the data live?",
+      "answer": "Mostly in the source system; partner contacts are in a spreadsheet.",
+      "source": {
+        "who": "CRM admin"
+      }
+    },
+    {
+      "category": "data_landscape",
+      "question": "Any regulatory data?",
+      "answer": null
+    },
+    {
+      "category": "scope",
+      "question": "When does scope freeze?",
+      "answer": "End of month.",
+      "source": {
+        "who": "PM"
+      }
+    }
+  ],
+  "objects": [
+    {
+      "name": "Account",
+      "criticality": "high",
+      "has_hierarchy": true,
+      "items": [
+        {
+          "category": "object_context",
+          "question": "What does Account mean?",
+          "answer": "Represents a customer company; owned by Sales ops, consumed by reps and finance.",
+          "source": {
+            "who": "Sales ops"
+          }
+        },
+        {
+          "category": "dependencies",
+          "question": "What loads first?",
+          "answer": "Users must exist before accounts for owner lookup.",
+          "source": {
+            "who": "CRM admin"
+          }
+        },
+        {
+          "category": "hierarchy",
+          "question": "What does the hierarchy look like?",
+          "answer": null
+        }
+      ],
+      "flags": [
+        {
+          "description": "Parent hierarchy source not provided",
+          "owner": "Finance"
+        }
+      ]
+    },
+    {
+      "name": "Partner",
+      "criticality": "low",
+      "items": []
+    }
+  ],
+  "discovered_outside_scope": []
+}

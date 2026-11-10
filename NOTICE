@@ -1,0 +1,23 @@
+DECIDE: Migration Discovery Risk Review
+© Stratus Consulting Group
+
+SERVICE BOUNDARY
+
+This repository contains integration materials only: documentation, synthetic
+examples and sample client code.
+
+The hosted DECIDE service, including its assessment engine, question bank,
+grading rules, weights, severities, risk definitions and methodology, is
+proprietary to Stratus Consulting Group. It is not included in this repository
+and is not licensed by it. Use of the hosted service is governed by
+the DECIDE Terms of Service (TERMS.md).
+
+The MIT License in this repository applies only to the source code files in
+this repository. It grants no rights to the hosted service or to Stratus
+methodology.
+
+TRADEMARKS
+
+"DECIDE", "Stratus" and the Stratus logo are trademarks of Stratus Consulting
+Group. No license in this repository grants any right to use them, except to
+refer accurately to the DECIDE service.
