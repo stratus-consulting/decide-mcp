@@ -1,11 +1,11 @@
 {
-    "engine_version": "0.6.0",
+    "engine_version": "0.7.0",
     "engagement_id": "example-crm-001",
     "summary": {
         "high": 3,
-        "medium": 8,
+        "medium": 9,
         "low": 6,
-        "total": 17
+        "total": 18
     },
     "changes": {
         "first_run": true,
@@ -20,7 +20,7 @@
         },
         {
             "category": "scope",
-            "coverage": "covered"
+            "coverage": "partial"
         },
         {
             "category": "use_case",
@@ -134,8 +134,8 @@
             "id": "R-03ecf8476c",
             "code": "ANSWER_WEAK",
             "severity": "medium",
-            "message": "\"Where does the data live?\" doesn't yet give enough to picture the solution. The answer points to a source system and a partner spreadsheet, but 'mostly' leaves other data locations unidentified and the source system is not named.",
-            "next_step": "Ask the CRM admin to name the source system and list every other place data is kept beyond it and the partner spreadsheet, including who maintains each.",
+            "message": "\"Where does the data live?\" doesn't yet give enough to picture the solution. The answer hedges with 'mostly' and does not name the source system, so the full set of data locations is still unclear beyond the partner contact spreadsheet.",
+            "next_step": "Ask the CRM admin to name the source system and list any other places data lives besides it and the partner contact spreadsheet, including who maintains that spreadsheet.",
             "object": null,
             "category": "data_landscape",
             "must_confirm": false
@@ -148,6 +148,16 @@
             "next_step": "Ask the system or data owner: \"Any regulatory data?\"",
             "object": null,
             "category": "data_landscape",
+            "must_confirm": false
+        },
+        {
+            "id": "R-d50dab84a1",
+            "code": "ANSWER_DEFERRED",
+            "severity": "medium",
+            "message": "\"Is the list of migrated objects final yet?\" was pushed to later. The answer gives no objects and pushes the final scope decision to the end of the month, so the scope is still open.",
+            "next_step": "Ask the PM for the current draft list of objects being migrated, and who signs off on it at month end.",
+            "object": null,
+            "category": "scope",
             "must_confirm": false
         },
         {
@@ -164,8 +174,8 @@
             "id": "R-095f0d6193",
             "code": "PROJECT_TOPIC_MISSING",
             "severity": "medium",
-            "message": "Nothing yet on how each business unit uses the system today, the business processes, and the reports that matter.",
-            "next_step": "Ask the business users who do this work about how each business unit uses the system today, the business processes, and the reports that matter.",
+            "message": "Nothing yet on current business processes and reporting.",
+            "next_step": "Ask the business users who do this work about current business processes and reporting.",
             "object": null,
             "category": "process",
             "must_confirm": false
@@ -174,8 +184,8 @@
             "id": "R-519e4ff33b",
             "code": "OBJECT_TOPIC_MISSING",
             "severity": "medium",
-            "message": "Account: nothing yet on where Account's data comes from, static files, record counts, and keys.",
-            "next_step": "Ask the system owner for Account about where Account's data comes from, static files, record counts, and keys.",
+            "message": "Account: nothing yet on its source data characteristics, files, volumes and keys.",
+            "next_step": "Ask the system owner for Account about its source data characteristics, files, volumes and keys.",
             "object": "Account",
             "category": "object_source",
             "must_confirm": false
@@ -184,8 +194,8 @@
             "id": "R-ff693d2931",
             "code": "OBJECT_TOPIC_MISSING",
             "severity": "medium",
-            "message": "Account: nothing yet on which Account records move, how far back, whether the logic differs by business unit, and whether original dates and owners are kept.",
-            "next_step": "Ask the business owner of Account about which Account records move, how far back, whether the logic differs by business unit, and whether original dates and owners are kept.",
+            "message": "Account: nothing yet on its data selection and retention requirements.",
+            "next_step": "Ask the business owner of Account about its data selection and retention requirements.",
             "object": "Account",
             "category": "migration_logic",
             "must_confirm": false
@@ -205,7 +215,7 @@
             "code": "OUTSIDE_SCOPE_NOT_LOGGED",
             "severity": "medium",
             "message": "Partner isn't in scope and isn't logged as discovered outside scope.",
-            "next_step": "Ask the scope owner whether Partner is in scope. If it isn't, log it with who asked for it and whether it's Day 1 or a planned fast follow.",
+            "next_step": "Ask the scope owner whether Partner is in scope. If it isn't, log it with who asked for it and whether it's needed for go-live or after go-live.",
             "object": "Partner",
             "category": null,
             "must_confirm": false
@@ -214,8 +224,8 @@
             "id": "R-cb2ec27e22",
             "code": "PROCUREMENT_CONTEXT_MISSING",
             "severity": "low",
-            "message": "What the client has purchased isn't captured, so proposals can't be checked against what the org can do.",
-            "next_step": "If it's available, capture what the client has purchased: edition, licenses, add-ons, storage, API limits and sandboxes.",
+            "message": "Purchased platform licenses and capacity aren't captured, so proposals can't be checked against what the target platform supports.",
+            "next_step": "If it's available, capture purchased platform licenses and capacity.",
             "object": null,
             "category": "procurement",
             "must_confirm": false
@@ -224,8 +234,8 @@
             "id": "R-e76fb24a16",
             "code": "OBJECT_TOPIC_MISSING",
             "severity": "low",
-            "message": "Partner: nothing yet on what Partner means to the business, who owns and uses it, its record types, and Day 1 needs.",
-            "next_step": "Ask the business owner of Partner about what Partner means to the business, who owns and uses it, its record types, and Day 1 needs.",
+            "message": "Partner: nothing yet on its business meaning, ownership, usage and record types.",
+            "next_step": "Ask the business owner of Partner about its business meaning, ownership, usage and record types.",
             "object": "Partner",
             "category": "object_context",
             "must_confirm": false
@@ -234,8 +244,8 @@
             "id": "R-0e9c4c57cf",
             "code": "OBJECT_TOPIC_MISSING",
             "severity": "low",
-            "message": "Partner: nothing yet on where Partner's data comes from, static files, record counts, and keys.",
-            "next_step": "Ask the system owner for Partner about where Partner's data comes from, static files, record counts, and keys.",
+            "message": "Partner: nothing yet on its source data characteristics, files, volumes and keys.",
+            "next_step": "Ask the system owner for Partner about its source data characteristics, files, volumes and keys.",
             "object": "Partner",
             "category": "object_source",
             "must_confirm": false
@@ -244,8 +254,8 @@
             "id": "R-8f1ea6d98d",
             "code": "OBJECT_TOPIC_MISSING",
             "severity": "low",
-            "message": "Partner: nothing yet on what must exist before Partner can load, and any reference data that's still changing.",
-            "next_step": "Ask the system owner for Partner about what must exist before Partner can load, and any reference data that's still changing.",
+            "message": "Partner: nothing yet on its load dependencies and reference data.",
+            "next_step": "Ask the system owner for Partner about its load dependencies and reference data.",
             "object": "Partner",
             "category": "dependencies",
             "must_confirm": false
@@ -254,8 +264,8 @@
             "id": "R-0e8aef7840",
             "code": "OBJECT_TOPIC_MISSING",
             "severity": "low",
-            "message": "Partner: nothing yet on Partner's source and target hierarchy, whether the source is complete, who owns it and who signs it off.",
-            "next_step": "Ask the business owner of the Partner hierarchy about Partner's source and target hierarchy, whether the source is complete, who owns it and who signs it off.",
+            "message": "Partner: nothing yet on its hierarchy structure.",
+            "next_step": "Ask the business owner of the Partner hierarchy about its hierarchy structure.",
             "object": "Partner",
             "category": "hierarchy",
             "must_confirm": false
@@ -264,8 +274,8 @@
             "id": "R-49198fa16b",
             "code": "OBJECT_TOPIC_MISSING",
             "severity": "low",
-            "message": "Partner: nothing yet on which Partner records move, how far back, whether the logic differs by business unit, and whether original dates and owners are kept.",
-            "next_step": "Ask the business owner of Partner about which Partner records move, how far back, whether the logic differs by business unit, and whether original dates and owners are kept.",
+            "message": "Partner: nothing yet on its data selection and retention requirements.",
+            "next_step": "Ask the business owner of Partner about its data selection and retention requirements.",
             "object": "Partner",
             "category": "migration_logic",
             "must_confirm": false

@@ -8,11 +8,11 @@
 <h1 align="center">DECIDE</h1>
 
 <p align="center">
-  <strong>Migration Discovery Risk Review</strong><br>
+  <strong>Data Migration Discovery Risk Review</strong><br>
   By Stratus Consulting Group
 </p>
 
-<p align="center"><em>Reduce uncertainty in migration Discovery, one round at a time.</em></p>
+<p align="center"><em>Reduce uncertainty in data migration discovery, one iteration at a time.</em></p>
 
 <p align="center">
   MCP Server · Hosted API · Proprietary Service
@@ -27,9 +27,9 @@
 
 ---
 
-DECIDE is an AI-powered migration discovery risk review service developed by Stratus Consulting Group.
+DECIDE is an AI-powered data migration discovery risk review service developed by Stratus Consulting Group.
 
-Designed for AI agents and migration professionals, DECIDE reviews migration discovery findings to identify unanswered questions, incomplete or insufficiently supported answers, and potential risks that require further investigation.
+Designed for AI agents and data migration professionals, DECIDE reviews data migration discovery findings to identify unanswered questions, incomplete or insufficiently supported answers, and potential risks that require further investigation.
 
 Rather than simply identifying gaps, DECIDE provides actionable next steps, including what needs clarification and which stakeholders should be consulted.
 
@@ -43,15 +43,25 @@ Submit findings after each discovery round to understand:
 - What questions should be addressed next
 - Who should provide the missing information
 
-DECIDE does not approve migration decisions, certify readiness, or produce a pass/fail score. It helps teams build a clearer, better-supported understanding of their migration before moving forward.
+DECIDE does not approve data migration decisions, certify readiness, or produce a pass/fail score. It helps teams build a clearer, better-supported understanding of their data migration before moving forward.
 
-### Built for real-world migration discovery
+### Built for real-world data migration discovery
 
-Migration discovery rarely happens in a single workshop. Information emerges through stakeholder conversations, source-system analysis, documentation reviews, profiling, and technical investigation.
+Data migration discovery rarely happens in a single workshop. Information emerges through stakeholder conversations, source-system analysis, documentation reviews, profiling, and technical investigation.
 
 DECIDE supports that process by reviewing the evidence available at each stage and highlighting what still requires attention.
 
 The service is accessible through MCP for AI agents and through a REST API for programmatic integrations.
+
+## Updates
+
+**18 November 2026: new name and clarified terms**
+
+- DECIDE is now named **DECIDE: Data Migration Discovery Risk Review**. The service, its endpoints and the MCP tool `validate_migration_discovery` are unchanged.
+- The [Terms of Service](TERMS.md) and [Data Handling](docs/data-handling.md) pages now describe in more detail how DECIDE already works. This clarifies existing processing. It doesn't introduce any new processing.
+  - **Third-party AI processing.** Submitted findings are processed by Anthropic, Stratus's AI model provider, for two purposes: to grade each answer (its question, answer, topic and source role), and to judge which topics apply to the data migration (its use case, object and table names and, when no use case is stated, the questions with excerpts of their answers). The terms previously mentioned answer grading only.
+  - **Request logs.** Like most web services, DECIDE's server writes a request log, which its hosting provider keeps, for operations, troubleshooting, security and abuse detection. Each line includes the caller's IP address, the time, the address requested and the response status. DECIDE's application access logs don't record submitted findings, answers or API keys.
+- The updated terms take effect on 18 November 2026. Questions: [engage@stratusgroups.com](mailto:engage@stratusgroups.com).
 
 ## Connect
 
@@ -97,7 +107,7 @@ All examples are synthetic. None contain client data.
 
 ---
 
-**Stratus DECIDE** is a proprietary migration discovery risk review service developed by **Stratus Consulting Group**.
+**DECIDE: Data Migration Discovery Risk Review** is a proprietary service developed by **Stratus Consulting Group**.
 
 [Website](https://www.stratusgroups.com) · [Terms](TERMS.md) · [Data Handling](docs/data-handling.md) · [Security](SECURITY.md)
 

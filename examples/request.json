@@ -23,7 +23,7 @@
     },
     {
       "category": "success",
-      "question": "What does Day 1 look like?",
+      "question": "What must sales reps be able to do in their first week on the new org?",
       "answer": "Reps can see open opportunities and accounts.",
       "source": {
         "who": "VP Sales"
@@ -31,7 +31,7 @@
     },
     {
       "category": "people",
-      "question": "Who are the decision makers?",
+      "question": "Who approves changes to the CRM data model?",
       "answer": "VP Sales is the sponsor; the CRM admin signs off on data.",
       "source": {
         "who": "PM"
@@ -52,8 +52,8 @@
     },
     {
       "category": "scope",
-      "question": "When does scope freeze?",
-      "answer": "End of month.",
+      "question": "Is the list of migrated objects final yet?",
+      "answer": "Not yet; it closes at the end of the month.",
       "source": {
         "who": "PM"
       }
@@ -67,7 +67,7 @@
       "items": [
         {
           "category": "object_context",
-          "question": "What does Account mean?",
+          "question": "Which teams work with Account records, and for what?",
           "answer": "Represents a customer company; owned by Sales ops, consumed by reps and finance.",
           "source": {
             "who": "Sales ops"

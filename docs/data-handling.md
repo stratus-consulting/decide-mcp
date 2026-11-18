@@ -1,12 +1,12 @@
 # Data Handling and Privacy
 
-Stratus DECIDE is designed to review migration discovery findings without requiring access to underlying customer records or source-system datasets.
+DECIDE: Data Migration Discovery Risk Review, by Stratus Consulting Group, is designed to review data migration discovery findings without requiring access to underlying customer records or source-system datasets.
 
 ### What information should be submitted?
 
 DECIDE accepts structured discovery findings, including:
 
-- Migration scope and objectives
+- Data migration scope and objectives
 - Discovery questions and answers
 - Source and target system context
 - Data objects, relationships, and dependencies
@@ -17,9 +17,9 @@ DECIDE accepts structured discovery findings, including:
 
 ### How submissions are processed
 
-DECIDE evaluates submitted findings to identify potential migration risks, incomplete discovery, and areas requiring further clarification.
+DECIDE evaluates submitted findings to identify potential data migration risks, incomplete discovery, and areas requiring further clarification.
 
-Answer-quality assessments are processed using an external AI model provider, Anthropic.
+Submitted findings are processed by Anthropic, Stratus's AI model provider, for two purposes: to grade the quality of each answer (its question, answer, topic and source role), and to judge which topics apply to the data migration (its use case, object and table names and, when no use case is stated, the questions with excerpts of their answers).
 
 ### Data retention
 
@@ -43,19 +43,21 @@ When disabled, derived grading results are not retained for reuse.
 
 DECIDE associates discovery reviews with an engagement identifier so consumers can compare risks across submissions.
 
-Change history is scoped to the relevant API key or anonymous caller identity.
+Change history is scoped to the relevant API key or, for anonymous callers, to a hashed identifier derived from the caller's network address. DECIDE's database stores that hashed identifier, not the address itself.
 
 ### Caching is not model training
 
 "Learning" in DECIDE means caching derived grading results so unchanged answers don't have to be graded again. Stratus does not use your submissions to train AI models.
 
-Answers sent for grading are processed by Anthropic as Stratus's AI model provider.
+Submitted findings sent for processing are handled by Anthropic as Stratus's AI model provider.
 
 ### Hosting and third-party processing
 
-DECIDE is hosted on Render and uses Anthropic for answer-quality assessment.
+DECIDE is hosted on Render and uses Anthropic to grade answers and to judge which topics apply.
 
-Hosting region, provider retention policies, and any applicable third-party data-processing terms should be confirmed before publication.
+### Request logs
+
+Like most web services, DECIDE's server writes a request log, which its hosting provider keeps, for operations, troubleshooting, security and abuse detection. A request log line includes the caller's IP address, the time, the address requested and the response status. It does not include request bodies (submitted findings and answers) or API keys.
 
 ### Questions
 

@@ -1,4 +1,4 @@
-"""Stratus DECIDE example client. Stratus Consulting Group, MIT License.
+"""Example client for DECIDE: Data Migration Discovery Risk Review. Stratus Consulting Group, MIT License.
 
 Submit discovery findings to DECIDE over REST and print the open risks.
 

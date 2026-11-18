@@ -20,7 +20,7 @@ Each submission must contain everything found so far, not just what's new. Anyth
 1. **`sow` (optional):** use case, objects in scope, assumptions, out-of-scope items, definition of success.
 2. **`project_items`:** each project-level question, its answer (`null` if still open) and who gave it.
 3. **`objects`:** for each object or table: name, criticality, whether it has a hierarchy, its questions and answers, and any flags.
-4. **`discovered_outside_scope` (optional):** objects found that aren't in scope, who asked for them, and whether they're needed on Day 1.
+4. **`discovered_outside_scope` (optional):** objects found that aren't in scope, who asked for them, and whether they're needed for go-live or after go-live (`timing`: `day1` or `fast_follow`).
 
 Tag every question with a topic:
 

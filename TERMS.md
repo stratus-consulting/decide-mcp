@@ -1,8 +1,8 @@
 # DECIDE Terms of Service
 
-Last updated: November 10, 2026
+Last updated: November 18, 2026
 
-These terms govern your use of DECIDE, the hosted migration discovery risk review service provided by Stratus Consulting Group ("Stratus", "we"). By using DECIDE through MCP or the REST API, you agree to them. If you accept these terms on behalf of an organization, you confirm that you have authority to bind it, and "you" includes that organization.
+These terms govern your use of DECIDE: Data Migration Discovery Risk Review ("DECIDE"), the hosted data migration discovery risk review service provided by Stratus Consulting Group ("Stratus", "we"). By using DECIDE through MCP or the REST API, you agree to them. If you accept these terms on behalf of an organization, you confirm that you have authority to bind it, and "you" includes that organization.
 
 If you have a separate written agreement with Stratus that covers DECIDE, that agreement takes precedence where it differs from these terms.
 
@@ -11,10 +11,10 @@ If you have a separate written agreement with Stratus that covers DECIDE, that a
 DECIDE reviews discovery findings you submit and returns open risks and recommended next steps. It is a risk review, not an approval:
 
 - It doesn't judge whether a business rule or decision is right or safe.
-- It doesn't certify migration readiness or return a pass/fail result.
+- It doesn't certify data migration readiness or return a pass/fail result.
 - It reviews only what you send, only when you call it.
 
-Its output is guidance generated with the help of AI. You remain responsible for your migration decisions and for checking anything DECIDE returns before you act on it.
+Its output is guidance generated with the help of AI. You remain responsible for your data migration decisions and for checking anything DECIDE returns before you act on it.
 
 ## 2. Access
 
@@ -45,13 +45,13 @@ To report a security issue, follow [SECURITY.md](SECURITY.md).
 
 The DECIDE service, its assessment engine, methodology and branding belong to Stratus. These terms don't grant you any rights in them except to use the service as described here.
 
-You may use the output DECIDE returns to you in your own migration work, including sharing it with your clients and project teams.
+You may use the output DECIDE returns to you in your own data migration work, including sharing it with your clients and project teams.
 
 Materials in this repository are licensed as stated in [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 ## 6. Your data
 
-How submissions are processed, what is kept, and how caching works is described in [Data Handling](docs/data-handling.md). Answers are processed by Anthropic, Stratus's AI model provider, to grade answer quality.
+How submissions are processed, what is kept, and how caching works is described in [Data Handling](docs/data-handling.md). Submitted findings are processed by Anthropic, Stratus's AI model provider, for two purposes: to grade the quality of each answer (its question, answer, topic and source role), and to judge which topics apply to the data migration (its use case, object and table names and, when no use case is stated, the questions with excerpts of their answers).
 
 ## 7. Changes and availability
 
